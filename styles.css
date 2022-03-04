@@ -27,6 +27,7 @@ body{
     padding-top: 85px;
 }
 
+
 /* Estilos Header */
 
 .header-container{
@@ -48,7 +49,9 @@ body{
 .nav-container{
     width: 378px;
 }
-
+.navbar-collapse{
+    display: none;
+}
 .nav-ul{
     display: flex;
     justify-content: space-around;
@@ -163,7 +166,7 @@ body{
     padding-top: 6em;
     padding-bottom: 6em;
 }
-.partners-container > div{
+.partners-principal{
     display: flex;
     flex-direction: row;
 }
@@ -426,25 +429,32 @@ body{
     }
 }
 @media (max-width: 768px) {
+    body{
+        padding-top: 54px;
+    }
     .header-wrap{
         width: 100%;
+        height: fit-content;
+        flex-direction: column;
     }
     .about-container{
         width: 100%;
         margin: auto;
         font-size: .8em;
-        padding-top: 6em;
-        padding-left: 4em;
-        padding-right: 4em;
-        padding-bottom: 4em;
+        padding-top: 2em;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1em;
     }
     .articles-container{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: auto;
     }
     .article-p{
-        width: 80%;
-        padding: 0 2em 0 0;
+        width: 100%;
     }
     .partners-container{
         width: 100%;
@@ -466,5 +476,140 @@ body{
     .formulario-contacto{
         width: 80%;
         margin: auto;
+    }
+    .nav-container{
+        width: 100%;
+        height: 1px;
+        background-color: #111111;
+        border-top: 1px solid #292929;
+        overflow: hidden;
+        transition: height 0.3s cubic-bezier(.22,.61,.36,1);    
+    }
+    .logo-container{
+        width: 100%;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .logo{
+        height: 37px;
+        margin: .5em;
+    }
+    .navbar-collapse{
+        display: block;
+        width: 44px;
+        height: 34px;
+        margin: .8em;
+        background: transparent;
+        border-radius: 15%;
+        border: 1px solid #292929;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .line{
+        width: 22px;
+        height: 2px;
+        background-color: white;
+        margin-bottom: 4px;
+    }
+    .line:last-child{
+        margin: 0;
+    }
+    .nav-ul{
+        flex-direction: column;
+        padding-left: 1em;
+    }
+    .nav-ul li{
+        margin-top: 1em;
+    }
+    .nav-ul li:last-child{
+        margin-bottom: 1em;
+    }
+    .nav-link{
+        font-size: .8em;
+    }
+    .main-container{
+        background-image: none;
+    }
+    .about-h1{
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 1em;
+    }
+    .about-h2{
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .bubble{
+        width: 108px;
+        height: 108px;
+    }
+    .works-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 3em;
+    }
+    .partners-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .partners-grid{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .partner-image{
+        float: none;
+        margin-right: 0;
+        width: auto;
+        max-width: 50%;
+    }
+    .partner-carousel{
+        width: 80%;
+        margin-top: 3em;
+    }
+    .partners-h2{
+        font-size: 2em;
+        font-weight: 400;
+    }
+    .partners-container{
+        padding-top: 2em;
+        padding-bottom: 0;
+    }
+    .partners-photos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .partner-photo{
+        width: 100%;
+        border: 0;
+    }
+    .stats-container{
+        height: 293px;
+        background-image: url("./img/lab.jpg");
+        background-size: 300%;
+        background-position: -700px 0px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .contact-container{
+        width: 100%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .contact-h2{
+        font-size: 1em;
+        font-weight: 400;
+    }
+    .formulario-contacto{
+        width: 95%;
     }
 }

@@ -12,12 +12,20 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
     <!-- Importación iconos Font Awesone -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Scripts -->
 </head>
 <body>
     <header class="header-container">
         <div class="header-wrap">
-            <div class="logo-container"><img src="./img/logo.png" alt="Cyrus Studio Logo" class="logo"></div>
-            <nav class="nav-container">
+            <div class="logo-container">
+                <img src="./img/logo.png" alt="Cyrus Studio Logo" class="logo">
+                <button id="boton-nav" onclick="navCollapse()" class="navbar-collapse">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+            <nav id="nav" class="nav-container">
                 <ul class="nav-ul">
                     <li><a href="#home" class="nav-link activate">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -69,7 +77,7 @@
         </section>
         <section id="partners" class="partners-container">
             <h2 class="partners-h2">Some of our happy clients</h2>
-            <div>
+            <div class="partners-principal">
                 <div class="partners-grid">
                     <img class="partner-image" src="./img/partners/1.jpg" alt="Wrapbootstrap">
                     <img class="partner-image" src="./img/partners/2.jpg" alt="Bootstrap">
@@ -121,5 +129,7 @@
         <p class="social-links"><a href="#"><i class="fa fa-facebook fa-2x"></i></a> <a href="#"><i class="fa fa-instagram fa-2x"></i></a> <a href="#"><i class="fa fa-twitter fa-2x"></i></a> <a href="#"><i class="fa fa-flickr fa-2x"></i></a> </p>
         <p class="footer-p">Copyright 2014 Cyrus Creative Studio. All rights reserved. </p>
     </footer>
+    <!-- Scripts -->
+    <script src="./navbar-collapse.js"></script>
 </body>
 </html>
